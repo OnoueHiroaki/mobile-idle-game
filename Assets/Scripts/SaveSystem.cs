@@ -13,9 +13,9 @@ public class SaveSystem : MonoBehaviour
     private void Start()
     {
         TestData save1 = new TestData();
-        save1._name = "aaa";
-        save1._hP = 10;
-        save1._time = System.DateTime.Now.ToString();
+        save1.Name = "aaa";
+        save1.HP = 10;
+        save1.Time = System.DateTime.Now.ToString();
         string json = JsonUtility.ToJson(save1);
         Debug.Log(json);
         SaveTest(save1);
@@ -33,7 +33,7 @@ public class SaveSystem : MonoBehaviour
     TestData LoadTest(string dataPath)
     {
         StreamReader reader = new StreamReader(dataPath,false);
-        string data = reader.ReadToEnd();
+        string data = reader.ReadToEnd(); 
         return JsonUtility.FromJson<TestData>(data);
     }
 }

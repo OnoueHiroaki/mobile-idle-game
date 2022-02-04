@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class TestData : MonoBehaviour
 {
-    public string _name;
-    public int _hP;
-    public string _time;
+    public string Name;
+    public int HP;
+    public string Time;
 }
