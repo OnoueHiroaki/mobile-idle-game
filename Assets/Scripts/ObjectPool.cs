@@ -6,7 +6,7 @@ public class ObjectPool : MonoBehaviour
 {
     List<GameObject> _materialObjectList;
     GameObject _poolPrefab;
-    //オブジェクトプールの処理
+    //ここから下は使えない
     public void CreateMaterialPool(GameObject materialPrefab, int maxCount)
     {
         _poolPrefab = materialPrefab;
