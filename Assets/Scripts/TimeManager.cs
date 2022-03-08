@@ -6,12 +6,13 @@ public class TimeManager : MonoBehaviour
 {
     //Œ»İ‚Ì
     //DateTime _currentTime;
-    public static TimeManager Instance { get; private set; }
+    static TimeManager s_instance = new TimeManager();
+    public static TimeManager Instance { get => s_instance; private set { } }
     //ûŠn‚µ‚½
     public DateTime CropTime { get; private set; }
     private void Awake()
     {
-        Instance = this;
+        s_instance = this;
     }
     public void CropResetTime()
     {

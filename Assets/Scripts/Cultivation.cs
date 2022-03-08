@@ -5,6 +5,8 @@ using System;
 
 public class Cultivation : MonoBehaviour
 {
+    static Cultivation s_instance;
+    public static Cultivation Instance { get { return s_instance; } private set { } }
     //Í”|‚ªI‚í‚éŠÔ
     [SerializeField] int _time = 300;
     [SerializeField] int _createCount = 20;
@@ -13,6 +15,7 @@ public class Cultivation : MonoBehaviour
     MaterialBase _material2;
     private void Start()
     {
+        s_instance = this;
         TimeSpan time = DateTime.Now - TimeManager.Instance.CropTime;
         //IdleCultivation();
         //CreateTest();
