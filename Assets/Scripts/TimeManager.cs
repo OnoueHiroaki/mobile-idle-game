@@ -9,13 +9,20 @@ public class TimeManager : MonoBehaviour
     static TimeManager s_instance = new TimeManager();
     public static TimeManager Instance { get => s_instance; private set { } }
     //ŽûŠn‚µ‚½Žž
-    public DateTime CropTime { get; private set; }
+    DateTime _cropTime;
+    public DateTime CropTime { get => _cropTime; private set { } }
+    private TimeSpan _timeSpan;
+    public TimeSpan TimeSpan { get => _timeSpan; private set { } }
     private void Awake()
     {
         s_instance = this;
     }
-    public void CropResetTime()
+    public void GetTimeSpan()
     {
-        CropTime = DateTime.Now;
+        _timeSpan = DateTime.Now - _cropTime;
+    }
+    public void SetCropTime()
+    {
+        _cropTime = DateTime.Now;
     }
 }

@@ -16,7 +16,6 @@ public class Cultivation : MonoBehaviour
     private void Start()
     {
         s_instance = this;
-        TimeSpan time = DateTime.Now - TimeManager.Instance.CropTime;
         //IdleCultivation();
         //CreateTest();
     }
