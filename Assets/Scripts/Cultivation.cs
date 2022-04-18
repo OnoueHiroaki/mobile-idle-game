@@ -26,7 +26,7 @@ public class Cultivation : MonoBehaviour
             CreateMaterial();
         }
     }
-    void IdleCultivation()
+    public void IdleCultivation()
     {
         TimeSpan time = DateTime.Now - TimeManager.Instance.CropTime;
         if (time.Minutes >= _time)
