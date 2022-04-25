@@ -28,8 +28,4 @@ public class Box : MonoBehaviour
             Destroy(child2.GetChild(i).gameObject);
         }
     }
-    private void Update()
-    {
-        print(_materials.Count);
-    }
 }
