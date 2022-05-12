@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PortionRecipe : RecipeBase
 {
-    GrassType _grassType = GrassType.CommonGrass;
-    StoneType _stoneType = StoneType.CommonStone;
-    public override void Formulation()
-    {        
-        if (_grassType == GrassType.CommonGrass)
+    [SerializeField] GameObject _item;
+    GreenGrass _greenGrass;
+    RedGrass _redGrass;
+    //調合させる(調合ボタンで使用する)
+    public void Formulation()
+    {
+        if (_greenGrass)
         {
-            if (_stoneType == StoneType.CommonStone)
+            if (_redGrass)
             {
-
+                Box box = FindObjectOfType<Box>(); 
             }
         }
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommonGrass : MaterialBase
+public class GreenGrass : MaterialBase
 {
     
 }
