@@ -10,9 +10,9 @@ public class Cultivation : MonoBehaviour
     //Í”|‚ªI‚í‚éŠÔ
     [SerializeField] int _time = 300;
     [SerializeField] int _createCount = 20;
-    [SerializeField] GameObject _parent1, _parent2;
-    MaterialBase _material1;
-    MaterialBase _material2;
+    [SerializeField] List<GameObject> _parentList = new List<GameObject>();
+    TimeSpan _timeDifference;
+    List<MaterialBase> _materialList = new List<MaterialBase>();
     private void Start()
     {
         s_instance = this;
@@ -28,7 +28,8 @@ public class Cultivation : MonoBehaviour
     }
     public void IdleCultivation()
     {
-        TimeSpan time = DateTime.Now - TimeManager.Instance.CropTime;
+        TimeManager tM = TimeManager.Instance; 
+        TimeSpan time = DateTime.Now - tM.CropTime;
         if (time.Minutes >= _time)
         {
             //c‚èŠÔ‚ğ‰ß‚¬‚Ä‚¢‚é‚½‚ßÅ‘åûŠn”‚Ìˆ—
@@ -46,20 +47,24 @@ public class Cultivation : MonoBehaviour
                 CreateMaterial();
             }
         }
+        //ûŠnŠÔ‚ÌXV
+        tM.SetCropTime();
+        tM.SetTimaSpan(time);
     }
     void CreateMaterial()
     {
-        var newObj1 = Instantiate(_material1);
-        var newObj2 = Instantiate(_material2);
-        newObj1.transform.SetParent(_parent1.transform, false);
-        newObj2.transform.SetParent(_parent2.transform, false);
+        for (int i = 0; i < _parentList.Count; i++)
+        {
+            var newObj = Instantiate(_materialList[i]);
+            newObj.transform.SetParent(_parentList[i].transform, false);
+        }
     }
     public void SetMaterial1(GameObject material)
     {
-        _material1 = material.GetComponent<MaterialBase>();
+        _materialList[0] = material.GetComponent<MaterialBase>();
     }
     public void SetMaterial2(GameObject material)
     {
-        _material2 = material.GetComponent<MaterialBase>();
+        _materialList[1] = material.GetComponent<MaterialBase>();
     }
 }
