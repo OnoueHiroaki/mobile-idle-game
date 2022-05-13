@@ -7,11 +7,9 @@ public class MaterialBase : MonoBehaviour
     [SerializeField] int _score;
     public int Score { get => _score; protected set { } }
 }
-public enum GrassType
+public enum MaterialType
 {
-    CommonGrass,
+    GreenGrass,
+    RedGrass,
 }
-public enum StoneType
-{
-    CommonStone,
-}
+
