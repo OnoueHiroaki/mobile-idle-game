@@ -8,7 +8,7 @@ namespace UIExtension
     public class Button : MonoBehaviour
     {
         bool _isActive;
-        [SerializeField] List<GameObject> _gameObjects = new List<GameObject>();
+        [SerializeField] GameObject _gameObject;
         Cultivation _cultivation;
         private void Start()
         {
@@ -16,17 +16,11 @@ namespace UIExtension
         }
         public void SetActive()
         {
-            for (int i = 0; i < _gameObjects.Count; i++)
-            {
-                _gameObjects[i].SetActive(_isActive = _isActive == true ? false : true);
-            }
+            _gameObject.SetActive(_isActive = _isActive == true ? false : true);
         }
         public void CloseButton()
         {
-            for (int i = 0; i < _gameObjects.Count; i++)
-            {
-                _gameObjects[i].SetActive(false);
-            }
+            _gameObject.SetActive(false);
         }
         public void Cultivation()
         {
