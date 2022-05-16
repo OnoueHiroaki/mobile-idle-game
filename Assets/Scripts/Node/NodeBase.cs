@@ -8,22 +8,18 @@ public enum NodeType
 }
 public class NodeBase : MonoBehaviour
 {
-    //ƒŒƒVƒs‚ÅŒÄ‚Ñ‚Ü‚Æ‚ß‚é
-    public NodeBase(NodeBase person, int level, int threshold, string label, string decision, bool nextPath)
-    {
-        Person = person;
-        Level = level;
-        Threshold = threshold;
-        Label = label;
-        Decision = decision;
-        NextPath = nextPath;
-    }
-
-    public NodeBase Person; // eƒm[ƒh
-    public NodeBase Child; // Žqƒm[ƒh
-    public int Level; // ŠK‘w
-    public int Threshold; // ‚µ‚«‚¢’l
-    public string Label; // ID
-    public string Decision; // ÅIŒ‹‰Ê
-    public bool NextPath; //ŽŸ‚Ìƒm[ƒh‚Éi‚ß‚é”»’è
+    // ŠK‘w
+    [SerializeField] int _level;
+    public int Level { get => _level; private set { } }
+    // ‚µ‚«‚¢’l
+    [SerializeField] int _threshold;
+    public int Threshold { get => _threshold; private set { } }
+    //ŽŸ‚Ìƒm[ƒh‚Éi‚ß‚é”»’è
+    [SerializeField] bool _nextPath;
+    public bool NextPath { get => _nextPath; private set { } }
+    //enum
+    
+    // ID
+    [SerializeField] int _label;
+    public int Label { get => _label; private set { } }
 }
