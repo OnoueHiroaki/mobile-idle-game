@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public enum NodeType
 {
     Person,
@@ -17,9 +17,10 @@ public class NodeBase : MonoBehaviour
     //ŽŸ‚Ìƒm[ƒh‚Éi‚ß‚é”»’è
     [SerializeField] bool _nextPath;
     public bool NextPath { get => _nextPath; private set { } }
-    //enum
-    
     // ID
     [SerializeField] int _label;
     public int Label { get => _label; private set { } }
+    //enum‚ÌŽí—Þ
+    Enum[] types = new Enum[3];
+    Dictionary<Enum, Dictionary<int, int>> Items = new Dictionary<Enum, Dictionary<int, int>>();
 }
