@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MaterialBase : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public enum GrassType
 }
 public enum OreType
 {
-
+    Iron
+}
+public enum WaterType
+{
+    Water
 }
 
 
