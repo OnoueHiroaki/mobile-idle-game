@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum MaterialType
 {
-    GreenGrass,
-    RedGrass,
-    Iron,
+    Grass,
+    Ore,
     Water,
 }
 [CreateAssetMenu(fileName = "MaterialData")]
@@ -24,4 +23,6 @@ public class Material
     [SerializeField] int _iD;
     [SerializeField] int _count;
     [SerializeField] int _score;
+    //Ží—Þ
+    [SerializeField] MaterialType _materialType;
 }

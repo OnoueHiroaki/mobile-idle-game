@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: MaterialData
   m_EditorClassIdentifier: 
   _types: 00000000010000000200000003000000
-  _data: []
+  _data:
+  - _iD: 0
+    _count: 0
+    _score: 0
+    _materialType: 0

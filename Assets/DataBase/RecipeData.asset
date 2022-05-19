@@ -14,22 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 
   _recipe:
-  - _id: 0
+  - _id: 1
     _node:
     - id: 0
     - id: 1
-  - _id: 0
-    _node: []
   references:
     version: 1
     00000000:
       type: {class: NodePerson, ns: , asm: Assembly-CSharp}
       data:
         _level: 0
-        _threshold: 1
         _nextPath: 0
-        _materialType: 0
         _label: 0
-        _count: 0
+        _count: 2
     00000001:
-      type: {class: , ns: , asm: }
+      type: {class: NodeChild, ns: , asm: Assembly-CSharp}
+      data:
+        _level: 1
+        _nextPath: 0
+        _label: 0
+        _count: 1

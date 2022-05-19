@@ -17,6 +17,6 @@ public class RecipeData : ScriptableObject
 [System.Serializable]
 public class Recipe
 {
-    [SerializeField] NodePerson _person;
-    [SerializeField] List<NodeChild> _child;
+    [SerializeField] int _id;
+    [SerializeReference, SubclassSelector] List<INodeable> _node;
 }
