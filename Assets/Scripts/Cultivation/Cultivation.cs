@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Cultivation : UnityEngine.MonoBehaviour
+public class Cultivation : MonoBehaviour
 {
     static Cultivation s_instance;
     public static Cultivation Instance { get { return s_instance; } private set { } }

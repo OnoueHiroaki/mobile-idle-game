@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Box : UnityEngine.MonoBehaviour
+public class Box : MonoBehaviour
 {
     public static Box Instance { get; private set; }
     [SerializeField] Transform _harvestArea1, _harvestArea2;

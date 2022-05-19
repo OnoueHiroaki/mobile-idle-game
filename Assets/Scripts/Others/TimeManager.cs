@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class TimeManager : UnityEngine.MonoBehaviour
+public class TimeManager : MonoBehaviour
 {
     static TimeManager s_instance = new TimeManager();
     public static TimeManager Instance { get => s_instance; private set { } }

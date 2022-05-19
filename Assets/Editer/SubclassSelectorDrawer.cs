@@ -47,7 +47,7 @@ public class SubclassSelectorDrawer : PropertyDrawer
 
     private void GetAllInheritedTypes(Type baseType, bool includeMono)
     {
-        Type monoType = typeof(UnityEngine.MonoBehaviour);
+        Type monoType = typeof(MonoBehaviour);
         inheritedTypes = AppDomain.CurrentDomain.GetAssemblies()
             .SelectMany(s => s.GetTypes())
             .Where(p => baseType.IsAssignableFrom(p) && p.IsClass && (!monoType.IsAssignableFrom(p) || includeMono))

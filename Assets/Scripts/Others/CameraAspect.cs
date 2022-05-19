@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CameraAspect : UnityEngine.MonoBehaviour
+public class CameraAspect : MonoBehaviour
 {
     CanvasScaler _canvas;
     private void Start()
