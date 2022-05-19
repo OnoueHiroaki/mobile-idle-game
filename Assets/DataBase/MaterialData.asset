@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d583ef99951c1f44bc9c3e5be8b99ed, type: 3}
   m_Name: MaterialData
   m_EditorClassIdentifier: 
+  _types: 00000000010000000200000003000000
+  _data: []
