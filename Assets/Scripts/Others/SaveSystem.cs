@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveSystem : MonoBehaviour
+public class SaveSystem : UnityEngine.MonoBehaviour
 {
     string _dataPath;
     private void Awake()

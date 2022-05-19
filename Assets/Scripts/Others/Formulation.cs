@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Formulation : MonoBehaviour
+public class Formulation : UnityEngine.MonoBehaviour
 {
     [SerializeField] RecipeData _recipeData;
     void FormulationJudge()
     {
-        
+        //RecipeData‚Åİ’è‚µ‚Ä‚¢‚é”»’è
     }
 }

@@ -2,25 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-public class TimeManager : MonoBehaviour
+public class TimeManager : UnityEngine.MonoBehaviour
 {
-    //Œ»İ‚Ì
-    //DateTime _currentTime;
     static TimeManager s_instance = new TimeManager();
     public static TimeManager Instance { get => s_instance; private set { } }
     //ûŠn‚µ‚½
     DateTime _cropTime;
     public DateTime CropTime { get => _cropTime; private set { } }
     private TimeSpan _timeSpan;
-    public TimeSpan TimeSpan { get => _timeSpan; private set { } }
     private void Awake()
     {
         s_instance = this;
     }
-    public void GetTimeSpan()
+    //Í”|ŠÔ‚©‚çûŠnŠÔ‚Ü‚Å‚ÌŠÔ‚ğ•Û‘¶‚·‚é
+    public void SetTimaSpan(TimeSpan time)
     {
-        _timeSpan = DateTime.Now - _cropTime;
+        _timeSpan = time + _timeSpan;
     }
+    //ûŠnŠÔ‚ÌXV
     public void SetCropTime()
     {
         _cropTime = DateTime.Now;

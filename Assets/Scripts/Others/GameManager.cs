@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-public class GameManager : MonoBehaviour
+public class GameManager : UnityEngine.MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     //[SerializeField] TestData _testData;

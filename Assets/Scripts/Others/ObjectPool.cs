@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+public class ObjectPool : UnityEngine.MonoBehaviour
 {
     List<GameObject> _materialObjectList;
     GameObject _poolPrefab;
