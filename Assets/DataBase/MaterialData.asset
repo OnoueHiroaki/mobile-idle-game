@@ -12,9 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d583ef99951c1f44bc9c3e5be8b99ed, type: 3}
   m_Name: MaterialData
   m_EditorClassIdentifier: 
-  _types: 00000000010000000200000003000000
+  _types: 000000000100000002000000
   _data:
-  - _iD: 0
+  - _name: GreenGrass
+    _iD: 1
+    _count: 0
+    _score: 0
+    _materialType: 0
+  - _name: RedGrass
+    _iD: 2
+    _count: 0
+    _score: 0
+    _materialType: 0
+  - _name: Iron
+    _iD: 3
+    _count: 0
+    _score: 0
+    _materialType: 0
+  - _name: Water
+    _iD: 4
     _count: 0
     _score: 0
     _materialType: 0

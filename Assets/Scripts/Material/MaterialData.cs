@@ -20,6 +20,7 @@ public class MaterialData : ScriptableObject
 [System.Serializable]
 public class Material
 {
+    [SerializeField] string _name;
     [SerializeField] int _iD;
     [SerializeField] int _count;
     [SerializeField] int _score;
