@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectorNode : NodeBase, INodeable
+public class SelectorNode : NodeBase
 {
-    public int Add(int num)
-    {
-        throw new System.NotImplementedException();
-    }
+    
 }

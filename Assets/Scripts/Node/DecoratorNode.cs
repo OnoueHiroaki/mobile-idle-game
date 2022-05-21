@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DecoratorNode : NodeBase, INodeable
+public class DecoratorNode : NodeBase
 {
-    public int Add(int num)
-    {
-        throw new System.NotImplementedException();
-    }
+    
 }
