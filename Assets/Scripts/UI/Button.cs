@@ -7,7 +7,7 @@ namespace UIExtension
     public class Button : MonoBehaviour
     {
         bool _isActive;
-        [SerializeField] GameObject _gameObject;
+        [SerializeField] UnityEngine.UI.Button _button;
         Cultivation _cultivation;
         private void Start()
         {
@@ -15,15 +15,20 @@ namespace UIExtension
         }
         public void SetActive()
         {
-            _gameObject.SetActive(_isActive = _isActive == true ? false : true);
+            _button.gameObject.SetActive(_isActive = _isActive == true ? false : true);
         }
         public void CloseButton()
         {
-            _gameObject.SetActive(false);
+            _button.gameObject.SetActive(false);
         }
         public void Cultivation()
         {
             _cultivation.IdleCultivation();
+        }
+        public void TimeUpdate()
+        {
+                                                 //ä÷êîÇì¸ÇÍÇÈ
+            _button.onClick.AsObservable().Subscribe();
         }
     }
 }
