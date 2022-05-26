@@ -12,6 +12,7 @@ namespace UIExtension
         private void Start()
         {
             _cultivation = FindObjectOfType<Cultivation>();
+            _button.OnClickAsObservable().Subscribe(_ => Cultivation());
         }
         public void SetActive()
         {
@@ -24,11 +25,6 @@ namespace UIExtension
         public void Cultivation()
         {
             _cultivation.IdleCultivation();
-        }
-        public void TimeUpdate()
-        {
-                                                 //ä÷êîÇì¸ÇÍÇÈ
-            _button.onClick.AsObservable().Subscribe();
         }
     }
 }
