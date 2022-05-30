@@ -10,7 +10,7 @@ public enum NodeState
     Running,
     Completed
 }
-public class NodeBase : INodeable
+public class NodeBase : IRecipeable
 {
     //êeÉmÅ[Éh
     [SerializeField, SubclassSelector] NodeBase _personNode;

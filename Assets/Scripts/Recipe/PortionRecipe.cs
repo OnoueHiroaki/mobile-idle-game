@@ -10,12 +10,6 @@ public class PortionRecipe : RecipeBase
     //調合させる(調合ボタンで使用する)
     public void Formulation()
     {
-        if (_greenGrass)
-        {
-            if (_redGrass)
-            {
-                Box box = FindObjectOfType<Box>(); 
-            }
-        }
+        
     }
 }

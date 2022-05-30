@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DecoratorNode : NodeBase
+public interface IRecipeable
 {
-    
+    int Add(int num);
 }
