@@ -28,9 +28,9 @@ MonoBehaviour:
     _iD: 3
     _count: 0
     _score: 0
-    _materialType: 0
+    _materialType: 1
   - _name: Water
     _iD: 4
     _count: 0
     _score: 0
-    _materialType: 0
+    _materialType: 2

@@ -23,8 +23,7 @@ MonoBehaviour:
       type: {class: NodeBase, ns: , asm: Assembly-CSharp}
       data:
         _level: 0
+        _nextPath: 0
+        _label: 0
         _count: 0
-        _node:
-          id: 1
-    00000001:
-      type: {class: , ns: , asm: }
+        _state: 0
