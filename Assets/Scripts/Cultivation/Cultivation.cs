@@ -11,8 +11,9 @@ public class Cultivation : MonoBehaviour
     [SerializeField] int _time = 300;
     [SerializeField] int _createCount = 20;
     [SerializeField] List<GameObject> _parentList = new List<GameObject>();
+    //ê∂ê¨Ç≥ÇπÇÈëfçﬁÇÃID
+    [SerializeField] List<int> _materialID;
     TimeSpan _timeDifference;
-    List<MaterialBase> _materialList = new List<MaterialBase>();
     private void Start()
     {
         s_instance = this;
@@ -55,16 +56,16 @@ public class Cultivation : MonoBehaviour
     {
         for (int i = 0; i < _parentList.Count; i++)
         {
-            var newObj = Instantiate(_materialList[i]);
-            newObj.transform.SetParent(_parentList[i].transform, false);
+            //var newObj = Instantiate(_materialList[i]);
+            //newObj.transform.SetParent(_parentList[i].transform, false);
         }
     }
     public void SetMaterial1(GameObject material)
     {
-        _materialList[0] = material.GetComponent<MaterialBase>();
+        //_materialList[0] = material.GetComponent<MaterialBase>();
     }
     public void SetMaterial2(GameObject material)
     {
-        _materialList[1] = material.GetComponent<MaterialBase>();
+        //_materialList[1] = material.GetComponent<MaterialBase>();
     }
 }
