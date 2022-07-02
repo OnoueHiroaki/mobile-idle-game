@@ -12,18 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7bb109c8fbb1d42ab653143a32be6b, type: 3}
   m_Name: RecipeData
   m_EditorClassIdentifier: 
-  _type: 
   _recipe:
-  - _id: 0
-    _node:
-    - id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: NodeBase, ns: , asm: Assembly-CSharp}
-      data:
-        _level: 0
-        _nextPath: 0
-        _label: 0
-        _count: 0
-        _state: 0
+  - _setData: 010000000200000003000000
+    _gameObject: {fileID: 0}

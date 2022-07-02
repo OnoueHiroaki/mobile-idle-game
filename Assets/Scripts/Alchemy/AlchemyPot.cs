@@ -25,11 +25,11 @@ public class AlchemyPot : MonoBehaviour
                 {
                     if (_recipeData.GetRecipe(i).SetData[j] == _getData[n])
                     {
-                        Debug.Log("ˆê’v‚µ‚½");
+                        Debug.Log(_recipeData.GetRecipe(i).SetData[j] + " " + _getData[n] + "ˆê’v‚µ‚½");
                         checkCount++;
                         break;
                     }
-                    Debug.Log("ˆê’v‚µ‚È‚¢");
+                    Debug.Log(_recipeData.GetRecipe(i).SetData[j] + " " + _getData[n] + "ˆê’v‚µ‚È‚¢");
                 }
                 Debug.Log(j + "”²‚¯‚Ü‚µ‚½");
             }

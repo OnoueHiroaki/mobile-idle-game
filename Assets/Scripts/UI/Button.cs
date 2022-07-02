@@ -7,6 +7,7 @@ namespace UIExtension
     public class Button : MonoBehaviour
     {
         bool _isActive;
+        [SerializeField] GameObject _gameObject;
         [SerializeField] UnityEngine.UI.Button _button;
         Cultivation _cultivation;
         private void Start()
@@ -16,7 +17,8 @@ namespace UIExtension
         }
         public void SetActive()
         {
-            _button.gameObject.SetActive(_isActive = _isActive == true ? false : true);
+            //ò_óùîrëºìI OR ââéZéq
+            _gameObject.SetActive(_isActive ^= true);
         }
         public void CloseButton()
         {

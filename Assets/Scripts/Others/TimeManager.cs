@@ -10,7 +10,7 @@ public class TimeManager : MonoBehaviour
     DateTime _cropTime;
     public DateTime CropTime { get => _cropTime; private set { } }
     private TimeSpan _timeSpan;
-    private void Awake()
+    void Awake()
     {
         s_instance = this;
     }

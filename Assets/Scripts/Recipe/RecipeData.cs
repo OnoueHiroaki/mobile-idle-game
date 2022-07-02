@@ -8,15 +8,15 @@ public enum RecipeType
 [CreateAssetMenu(fileName = "RecipeData")]
 public class RecipeData : ScriptableObject
 {
-    [SerializeField] List<RecipeType> _type;
     [SerializeField] List<Recipe> _recipe;
-    public RecipeType GetType(int num) => _type[num];
+    public List<Recipe> Recipes { get => _recipe; set { } }
     public Recipe GetRecipe(int num) => _recipe[num];
 }
 
 [System.Serializable]
 public class Recipe
 {
-    [SerializeField] int _id;
-    [SerializeReference, SubclassSelector] List<IRecipeable> _node;
+    [SerializeField] List<int> _setData;
+    [SerializeField] GameObject _gameObject;
+    public List<int> SetData { get => _setData; set { } }
 }

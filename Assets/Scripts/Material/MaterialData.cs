@@ -10,10 +10,7 @@ public enum MaterialType
 [CreateAssetMenu(fileName = "MaterialData")]
 public class MaterialData : ScriptableObject
 {
-    [SerializeField] List<MaterialType> _types;
     [SerializeField] List<Material> _data;
-    //ID‚Ì”»’è‚ð‚·‚éˆ×‚ÉŽæ‚Á‚Ä‚­‚éŠÖ”
-    public MaterialType GetType(int num) => _types[num];
     //ƒf[ƒ^‚ðŽæ‚Á‚Ä‚­‚é
     public Material GetData(int num) => _data[num];
 }
@@ -21,9 +18,17 @@ public class MaterialData : ScriptableObject
 public class Material
 {
     [SerializeField] string _name;
-    [SerializeField] int _iD;
-    [SerializeField] int _count;
-    [SerializeField] int _score;
+    [SerializeField] int _id;
+    //[SerializeField] int _count;
+    [SerializeField] int _maxScore;
+    [SerializeField] int _minScore;
     //Ží—Þ
-    [SerializeField] MaterialType _materialType;
+    [SerializeField] MaterialType _type;
+    [SerializeField] GameObject _object;
+    public string Name { get=> _name; set { } }
+    public int ID { get => _id; set { } }
+    public int MaxScore { get => _maxScore; set { } }
+    public int MinScore { get => _minScore; set { } }
+    public MaterialType Type { get => _type; set { } }
+    public GameObject Object { get => _object; set { } }
 }
