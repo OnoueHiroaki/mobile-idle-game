@@ -2,39 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
 public class Cultivation : MonoBehaviour
 {
     static Cultivation s_instance;
     public static Cultivation Instance { get { return s_instance; } private set { } }
-    //Í”|‚ªI‚í‚éŠÔ
-    [SerializeField] int _time = 300;
-    [SerializeField] int _createCount = 20;
-    [SerializeField] List<GameObject> _parentList = new List<GameObject>();
-    //¶¬‚³‚¹‚é‘fŞ‚ÌID
-    [SerializeField] List<int> _materialID;
-    TimeSpan _timeDifference;
-    private void Start()
+    [SerializeField] MaterialData _material;
+    [SerializeField] GameObject _parent;
+    [SerializeField] int _id;
+    public void CreateTest(bool debugMode,int createCount)
     {
-        s_instance = this;
-        //IdleCultivation();
-        //CreateTest();
-    }
-    public void CreateTest()
-    {
-        for (int i = 0; i < _createCount; i++)
+        if (debugMode == true)
         {
-            CreateMaterial();
+            for (int i = 0; i < createCount; i++)
+            {
+                CreateMaterial();
+            }
         }
     }
-    public void IdleCultivation()
+    public void IdleCultivation(int time,TimeSpan interval,int createCount)
     {
-        TimeManager tM = TimeManager.Instance; 
-        TimeSpan time = DateTime.Now - tM.CropTime;
-        if (time.Minutes >= _time)
+        TimeManager tm = TimeManager.Instance;
+        interval = DateTime.Now - tm.CropTime;
+        if (interval.Minutes >= time)
         {
             //c‚èŠÔ‚ğ‰ß‚¬‚Ä‚¢‚é‚½‚ßÅ‘åûŠn”‚Ìˆ—
-            for (int i = 0; i < _createCount; i++)
+            for (int i = 0; i < createCount; i++)
             {
                 CreateMaterial();
             }
@@ -42,30 +34,25 @@ public class Cultivation : MonoBehaviour
         else
         {
             //‰½•ªŒo‚Á‚Ä‚¢‚é‚©‚Æ‚»‚ê‚É‚æ‚Á‚ÄûŠn”‚ª•Ï‚í‚é
-            for (int i = 0; i < time.Minutes; i += _time / _createCount)
+            for (int i = 0; i < interval.Minutes; i += time / createCount)
             {
                 //ˆê‚Â‚¾‚¯Í”|‚³‚¹‚éŠÖ”
                 CreateMaterial();
             }
         }
         //ûŠnŠÔ‚ÌXV
-        tM.SetCropTime();
-        tM.SetTimaSpan(time);
+        tm.SetCropTime();
+        tm.SetTimaSpan(interval);
     }
     void CreateMaterial()
     {
-        for (int i = 0; i < _parentList.Count; i++)
-        {
-            //var newObj = Instantiate(_materialList[i]);
-            //newObj.transform.SetParent(_parentList[i].transform, false);
-        }
+        var newMaterial = _material.GetData(_id);
+        var newObj = Instantiate(newMaterial.Object);
+        newObj.GetComponent<MaterialInfo>().SetUp(newMaterial);
+        newObj.transform.SetParent(_parent.transform, false);
     }
-    public void SetMaterial1(GameObject material)
+    public void SetID(Material material)
     {
-        //_materialList[0] = material.GetComponent<MaterialBase>();
-    }
-    public void SetMaterial2(GameObject material)
-    {
-        //_materialList[1] = material.GetComponent<MaterialBase>();
+        _id = material.ID;
     }
 }

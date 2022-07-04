@@ -12,7 +12,7 @@ public class MaterialData : ScriptableObject
 {
     [SerializeField] List<Material> _data;
     //ƒf[ƒ^‚ðŽæ‚Á‚Ä‚­‚é
-    public Material GetData(int num) => _data[num];
+    public Material GetData(int id) => _data[id];
 }
 [System.Serializable]
 public class Material

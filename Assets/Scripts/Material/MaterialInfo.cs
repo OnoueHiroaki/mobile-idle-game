@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class MaterialInfo : MonoBehaviour
 {
-    [SerializeField] int _id;
-    [SerializeField] MaterialData _data;
+    Material _data;
     [SerializeField] int _score;
     private void Start()
     {
-        _score = Random.Range(_data.GetData(_id).MinScore, _data.GetData(_id).MaxScore);
-        Debug.Log(_score);
+       
+    }
+    public void SetUp(Material mat) 
+    {
+        _data = mat;
+        _score = Random.Range(_data.MinScore, _data.MaxScore);
     }
 }
