@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RecipeData
   m_EditorClassIdentifier: 
   _recipe:
-  - _setData: 010000000200000003000000
+  - _setData: 030000000100000002000000
     _gameObject: {fileID: 0}

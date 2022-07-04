@@ -12,25 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d583ef99951c1f44bc9c3e5be8b99ed, type: 3}
   m_Name: MaterialData
   m_EditorClassIdentifier: 
-  _types: 000000000100000002000000
   _data:
   - _name: GreenGrass
-    _iD: 1
-    _count: 0
-    _score: 0
-    _materialType: 0
+    _id: 0
+    _maxScore: 30
+    _minScore: 1
+    _type: 0
+    _object: {fileID: 5753917481001432606, guid: e2d7e02a107865844b9c5412178205f9,
+      type: 3}
   - _name: RedGrass
-    _iD: 2
-    _count: 0
-    _score: 0
-    _materialType: 0
-  - _name: Iron
-    _iD: 3
-    _count: 0
-    _score: 0
-    _materialType: 1
+    _id: 1
+    _maxScore: 0
+    _minScore: 0
+    _type: 0
+    _object: {fileID: 0}
+  - _name: Rock
+    _id: 2
+    _maxScore: 0
+    _minScore: 0
+    _type: 1
+    _object: {fileID: 0}
   - _name: Water
-    _iD: 4
-    _count: 0
-    _score: 0
-    _materialType: 2
+    _id: 3
+    _maxScore: 0
+    _minScore: 0
+    _type: 0
+    _object: {fileID: 0}
