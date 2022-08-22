@@ -13,6 +13,7 @@ public class MaterialInfo : MonoBehaviour
     UnityEngine.UI.Button _button;
     private void Start()
     {
+        //生成時に栽培クラスのIDを入れる
         SetUp(_materialData.GetData(0));
     }
     //このオブジェクトを生成するタイミングで呼ぶ
