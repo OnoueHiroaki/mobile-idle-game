@@ -6,10 +6,8 @@ public class AlchemyPot : MonoBehaviour
 {
     [SerializeField] RecipeData _recipeData;
     [SerializeField] List<int> _getData;
-    private void Start()
-    {
 
-    }
+    
     void Get()
     {
 

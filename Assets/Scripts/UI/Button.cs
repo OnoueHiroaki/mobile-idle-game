@@ -7,26 +7,30 @@ namespace UIExtension
     public class Button : MonoBehaviour
     {
         bool _isActive;
-        [SerializeField] GameObject _gameObject;
-        [SerializeField] UnityEngine.UI.Button _button;
+        UnityEngine.UI.Button _button;
         Cultivation _cultivation;
+        UnityEngine.Events.UnityAction _action;
         private void Start()
         {
+            _button = GetComponent<UnityEngine.UI.Button>();
             _cultivation = FindObjectOfType<Cultivation>();
             _button.OnClickAsObservable().Subscribe(_ => Cultivation());
+            //OnClickのイベント追加方法
+            _action += Cultivation; 
+            _button.onClick.AddListener(_action);
         }
-        public void SetActive()
+        public void SetActive(GameObject gameobject)
         {
             //論理排他的 OR 演算子
-            _gameObject.SetActive(_isActive ^= true);
+            gameobject.SetActive(_isActive ^= true);
         }
-        public void CloseButton()
+        public void CloseButton(GameObject gameobject)
         {
-            _button.gameObject.SetActive(false);
+            gameobject.gameObject.SetActive(false);
         }
-        public void Cultivation()
+        void Cultivation()
         {
-            _cultivation.IdleCultivation();
+            //_cultivation.IdleCultivation();
         }
     }
 }
